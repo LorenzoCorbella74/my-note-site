@@ -13,6 +13,15 @@ export function GeneratePage(opt: {sidebarHtml:string, htmlContent:string, cssRe
                 <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"/>
                 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
                 <link rel="stylesheet" href="${opt.cssRelativePath}">
+                <style>
+                    .sidebar a.active {
+                        font-weight: bold;
+                        background-color: var(--sidebar-active-link);
+                        border-radius: 4px;
+                        padding-left: 8px;
+                        margin-left: -8px;
+                    }
+                </style>
             </head>
             <body>
                 <div class="content-page">
@@ -60,8 +69,52 @@ export function GeneratePage(opt: {sidebarHtml:string, htmlContent:string, cssRe
                             const targetElement = document.querySelector(targetId);
                             if (targetElement) {
                                 targetElement.scrollIntoView({ behavior: 'smooth' });
+                                
+                                // Remove active class from all links and add to the clicked one
+                                document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+                                this.classList.add('active');
                             }
                         });
+                    });
+                    
+                    // Highlight sidebar links based on scroll position using Intersection Observer
+                    const headings = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]');
+                    const sidebarLinks = document.querySelectorAll('.sidebar a[href^="#"]');
+                    
+                    // Create a map of heading IDs to their corresponding sidebar links
+                    const idToLinkMap = new Map();
+                    sidebarLinks.forEach(link => {
+                        const id = link.getAttribute('href').substring(1); // Remove the # character
+                        idToLinkMap.set(id, link);
+                    });
+                    
+                    // Configure the Intersection Observer
+                    const observerOptions = {
+                        rootMargin: '-80px 0px -80% 0px',  // Trigger when heading is near the top
+                        threshold: 0
+                    };
+                    
+                    const headingObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            // Get the ID of the heading being observed
+                            const id = entry.target.getAttribute('id');
+                            // Get the corresponding sidebar link
+                            const link = idToLinkMap.get(id);
+                            
+                            if (link) {
+                                if (entry.isIntersecting) {
+                                    // Remove active class from all sidebar links
+                                    sidebarLinks.forEach(a => a.classList.remove('active'));
+                                    // Add active class to this link
+                                    link.classList.add('active');
+                                }
+                            }
+                        });
+                    }, observerOptions);
+                    
+                    // Observe all headings
+                    headings.forEach(heading => {
+                        headingObserver.observe(heading);
                     });
                     
                     document.querySelectorAll('pre code').forEach((el) => {

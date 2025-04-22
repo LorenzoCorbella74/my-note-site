@@ -122,7 +122,7 @@ async function main() {
     await generateIndexPages(markdownFiles, INPUT_DIR, OUTPUT_DIR);
 
     console.log("Site generation complete!");
-    // serving site
+    // 7. serving site
     Deno.serve((_req: Request) => {
       return serveDir(_req, {
         fsRoot: OUTPUT_DIR,

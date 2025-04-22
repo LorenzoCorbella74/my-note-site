@@ -75,7 +75,7 @@ async function isImageOnlyDirectory(dirPath: string): Promise<boolean> {
   return hasFiles && allImagesOrDirs;
 }
 
-async function main(noDeploy:boolean = false) {
+async function main(deploy:boolean) {
   try {
     // 1. Ensure output directory exists
     await ensureDir(OUTPUT_DIR);
@@ -123,7 +123,7 @@ async function main(noDeploy:boolean = false) {
 
     console.log("Site generation complete!");
     // 7. serving site
-    if(noDeploy){
+    if(deploy){
       Deno.serve((_req: Request) => {
         return serveDir(_req, {
           fsRoot: OUTPUT_DIR,
@@ -313,13 +313,13 @@ async function generateIndexPages(files: string[], inputBase: string, outputBase
 
 // Parse command-line arguments
 const args = Deno.args;
-let noDeploy = false;
+let deploy = true; // default as true for development 
 
 for (const arg of args) {
-  if (arg === "--nodeploy") {
-    noDeploy = true;
+  if (arg === "--deploy") {
+    deploy = false;
     break;
   }
 }
 
-await main(noDeploy);
+await main(deploy);

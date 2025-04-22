@@ -1,8 +1,8 @@
 export function GeneratePage(opt: {sidebarHtml:string, htmlContent:string, cssRelativePath:string, relativePath:string }) {
     // Calculate parent folder path
     const parentPath = opt.relativePath.includes('/') ? 
-                       opt.relativePath.substring(0, opt.relativePath.lastIndexOf('/')) + '/index.html' :
-                       'index.html';
+                       opt.relativePath.substring(0, opt.relativePath.lastIndexOf('/')) /* + '/index.html' */ :
+                       ""/* 'index.html' */;
 
     return `<!DOCTYPE html>
             <html lang="en" data-theme="light">

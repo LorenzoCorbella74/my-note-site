@@ -7,6 +7,6 @@
   },
   "tasks": {
     "start": "deno run --allow-read --allow-write --allow-net main.ts",
-    "build":"deno run --allow-read --allow-write main.ts --nodeploy"
+    "build":"deno run --allow-read --allow-write main.ts --allow-net --deploy"
   }
 }

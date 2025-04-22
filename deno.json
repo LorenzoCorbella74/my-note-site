@@ -6,6 +6,7 @@
     "markdown-it": "npm:markdown-it@^14.1.0"
   },
   "tasks": {
-    "start": "deno run --allow-read --allow-write --allow-net main.ts"
+    "start": "deno run --allow-read --allow-write --allow-net main.ts",
+    "build":"deno run --allow-read --allow-write main.ts --nodeploy"
   }
 }

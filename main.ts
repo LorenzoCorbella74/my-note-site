@@ -75,7 +75,7 @@ async function isImageOnlyDirectory(dirPath: string): Promise<boolean> {
   return hasFiles && allImagesOrDirs;
 }
 
-async function main() {
+async function main(noDeploy:boolean = false) {
   try {
     // 1. Ensure output directory exists
     await ensureDir(OUTPUT_DIR);
@@ -123,12 +123,14 @@ async function main() {
 
     console.log("Site generation complete!");
     // 7. serving site
-    Deno.serve((_req: Request) => {
-      return serveDir(_req, {
-        fsRoot: OUTPUT_DIR,
-        urlRoot: "",
+    if(noDeploy){
+      Deno.serve((_req: Request) => {
+        return serveDir(_req, {
+          fsRoot: OUTPUT_DIR,
+          urlRoot: "",
+        });
       });
-    });
+    }
   } catch (error) {
     console.error("An error occurred during site generation:", error);
     Deno.exit(1);
@@ -309,4 +311,15 @@ async function generateIndexPages(files: string[], inputBase: string, outputBase
   console.log("Index page generation finished.");
 }
 
-await main();
+// Parse command-line arguments
+const args = Deno.args;
+let noDeploy = false;
+
+for (const arg of args) {
+  if (arg === "--nodeploy") {
+    noDeploy = true;
+    break;
+  }
+}
+
+await main(noDeploy);

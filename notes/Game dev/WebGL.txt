@@ -1,0 +1,48 @@
+GENERAL
+https://dev.to/rubiin/build-your-own-insert-technology-here-40bg
+
+WEBGL
+https://webglfundamentals.org/		-> Tutorial
+https://dens.website/tutorials/webgl -> Tutorial
+https://www.programmingtil.com/topics/webgl
+https://awesomeopensource.com/projects/webgl2
+
+GLSL (OpenGL Shading Language)
+https://thebookofshaders.com/00/?lan=it -> Libro
+https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders
+https://solarianprogrammer.com/2013/05/22/opengl-101-matrices-projection-view-model/ 
+https://www.tutorialspoint.com/webgl/webgl_shaders.htm
+
+TUTORIAL
+https://github.com/Xibanya/ShaderTutorials
+
+THREE.JS
+https://code.tutsplus.com/tutorials/webgl-with-threejs-shaders--net-36054
+
+ANGULAR
+https://www.digizoo.com.au/1447/introduction-to-webgl-using-angular-part-1-how-to-set-up-a-scene/
+https://www.digizoo.com.au/1684/intro-to-webgl-using-angular-how-to-setup-and-compile-shaders-part-2/
+https://www.digizoo.com.au/1741/intro-to-webgl-using-angular-how-to-build-in-3d-part-3/
+
+PAGAMENTO
+https://www.udemy.com/course/learn-glsl-shaders-from-scratch/
+
+LIBRARIES
+https://github.com/FarazzShaikh/glNoise
+https://github.com/FarazzShaikh/Terrain-Builder
+
+ESEMPI THREE.JS
+https://threejs.org/examples/webgl_shaders_ocean.html
+https://dev.to/viridia/creating-portals-in-three-js-2dbm
+https://github.com/Cloud9c/taro
+
+DOCUMENTAZIONE
+https://docsify.js.org/#/ (Taro ha la documentazione con docsify
+https://dev.to/michaelcurrin/docsify-tutorial-jc6
+https://michaelcurrin.github.io/docsify-js-tutorial/#/
+https://michaelcurrin.github.io/docsify-js-template/#/
+https://opensource.com/article/20/7/docsify-github-pages
+https://developpaper.com/using-docsify-to-do-the-detailed-configuration-tutorial-of-document-website/
+https://bryantson.medium.com/easy-way-to-create-your-documentation-site-with-docsify-and-github-pages-d4868b5b56e9
+
+https://github.com/mkdocs/mkdocs

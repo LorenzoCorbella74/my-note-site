@@ -1,0 +1,36 @@
+WEBGPU
+Official: https://gpuweb.github.io/gpuweb/
+Samples:
+https://austin-eng.com/webgpu-samples
+https://github.com/austinEng/webgpu-samples
+https://webkit.org/demos/webgpu/
+https://github.com/tsherif/webgpu-examples
+https://github.com/samdauwe/webgpu-native-examples (esempi in C)
+
+https://github.com/mikbry/awesome-webgpu
+https://dev.to/ndesmic/basic-webgpu-rendering-2kob
+https://dev.to/ndesmic/building-a-webgpu-canvas-component-1hi5
+https://dmnsgn.medium.com/graphics-on-the-web-and-beyond-with-webgpu-13c4ba049039
+https://web.dev/gpu-compute/
+https://github.com/drawmindmap/webgpu-training
+https://metalbyexample.com/webgpu-part-one/
+https://metalbyexample.com/webgpu-part-two/
+
+SEED
+https://alain.xyz/blog/raw-webgpu
+https://github.com/alaingalvan/webgpu-seed
+
+BOOK
+https://jack1232.github.io/webgpu00/
+https://www.amazon.it/Practical-WebGPU-Graphics-Creating-Next-Generation/dp/B091GCHJ41
+
+Video
+https://www.youtube.com/watch?v=OWHqwbylX14&list=PLnTPVrg9-a1Ou2KXUniDr1HC7qgL2JD2x&index=1
+https://github.com/tamani-coding/webgpu-basic-renderer
+
+https://www.youtube.com/watch?v=Z7Nf5UYppuc
+https://maierfelix.github.io/2020-01-13-webgpu-ray-tracing/
+https://github.com/maierfelix/WebGPU-Path-Tracer
+
+WebGPU Shading Language
+https://gpuweb.github.io/gpuweb/wgsl/

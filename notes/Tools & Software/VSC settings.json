@@ -1,0 +1,62 @@
+{
+    "window.zoomLevel": 0,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Monokai Pro",
+    "todohighlight.isEnable": true,
+    "todohighlight.keywords": [{
+            "text": "NOTE:",
+            "color": "white",
+            "backgroundColor": "#1E90FF",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "FUTURE:",
+            "color": "white",
+            "backgroundColor": "green",
+            "overviewRulerColor": "grey"
+        }
+    ],
+    "vsicons.projectDetection.autoReload": true,
+    "sync.gist": "",
+    "sync.lastUpload": "",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "terminal.integrated.rendererType": "dom",
+    "vetur.validation.template": false,
+    "eslint.validate": [
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        }
+    ],
+    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": true
+
+}

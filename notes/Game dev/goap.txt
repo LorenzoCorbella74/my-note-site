@@ -1,0 +1,85 @@
+GOAP FPS
+
+---- DEATHMATCH-----
+
+precondition: se powerup è vicino e non si ha già un valore alto (utility) o si ha un valore basso
+actions: recupera powerup
+effetct: aumenta hp/ap
+
+precondition: se arma è vicino e non si possiede di già e rientra tra le preferite (utility)
+actions: recupera arma
+effetct: aumenta numero di armi a disposizione
+
+precondition: se munizioni sono vicine e non si ha già un valore alto (e si possiede l'arma relativa)
+actions: recupera munizioni
+effetct: aumenta numero di munizioni a disposizione
+
+precondizione: se si ha un nemico vicino e visibile 
+azione: scegli il nemico come target corrente di conflitto
+effetto: si ha un target di attacco
+
+precondizione: se si ha un target di attacco 
+azione: ci si orienta verso il target di attacco
+effetto: si è orientati
+
+precondizione: se non si ha un target di attacco 
+azione: ci si orienta verso il target a cui ci stiamo muovendo
+effetto: si è orientati
+
+precondition:
+0) se orientati
+1) si ha una quantità di hp o ap sufficiente ad affrontare lo scontro
+2) si ha qualche powerup speciale a maggior ragione (in primis quad damage)
+actions: Move close to enemy con pattern specifico
+effect: close to enemy = true
+
+precondition: 
+0) se sotto attacco !
+1) si possiede un'arma (preferibilmente a distanza o tra le preferite), 
+2) si hanno abbastanza munizioni, 
+3) si ha un target di attacco
+4) si ha una quantità di hp o ap sufficiente ad affrontare lo scontro
+5) si ha qualche powerup speciale
+actions: shoot an enemy
+effect: decrease enemy hp
+
+precondizioni: se hp nemico corrente è >0
+Obiettivo: kill the enemy corrente (enemy) hp=0
+effetto: guadagna un punto vittoria se deathmatch o path to target_global = free
+
+Obiettivo: win the match (a seconda del tipo di gioco, i punti per deathmatch o ctf sono diversi)
+
+---- TEAM DEATHMATCH-----
+
+condizione: se un team mate è sotto attacco e non si è sotto attacco a nostra volta e si è sufficientmente vicini
+azione: scegli il nemico che attacca il team come target corrente di conflitto
+effetto: si ha un target di attacco
+
+
+---- CTF -----
+
+precondizione: se il gioco è CTF e si ha una attitude = "attack"
+azione: scegli la bandiera nemica come target corrente globale di movimento
+effetto: si ha un target globale
+
+precondizione: se si ha una attitude ="defend"
+azione: difendere la team flag
+effetto: diminuire le probabilità di vittoria della squadra avversaria
+
+precondizione: se si ha un target globale
+azione: moveTo enemy flag
+effect: enemty flag captured
+
+precondizione:  se enemy flag captured
+azione: back to team flag
+effect: guadagna un punto vittoria se CTF e diminuisce le probabilità di vittoria della squadra avversaria
+
+precondizione: se enemy flag è vicina ed è visibile èd è dropped
+azione: moveTo enemy flag, 
+effect: enemty flag captured
+
+precondizione: se la team flag è vicina ed è visibile èd è dropped
+azione: moveTo team flag, 
+effect: team flag return -> diminuire le probabilità di vittoria della squadra avversaria
+
+

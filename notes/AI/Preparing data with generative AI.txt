@@ -1,0 +1,46 @@
+Preparing data with generative AI:
+- handling missing data
+- removing duplicates
+- filtering outliers
+
+
+1) Si scrive il prompt:
+Please perform the following tasks for me using the provided office dataset (office_dataset.csv):
+
+Load the dataset from the local drive.
+Display the all rows of the dataset.
+
+
+---- Handling Missing Values
+Identify and display the number of missing values in each column.
+Fill the missing values in the 'Age' column with the average age and show the previous and new values of the 'Age' column.
+Fill the missing values in the 'Salary' column using the forward fill method and show the previous and new values of the 'Salary' column.
+Display the dataset after handling the missing values.
+
+---- Removing Duplicates
+Check for duplicate rows in the dataset and display the number of duplicate rows along with the duplicate rows themselves.
+Remove the duplicate rows from the dataset.
+Display the complete dataset after removing the duplicate values.
+
+---- Filtering Outliers
+Identify outliers in the 'Salary' column using the Interquartile Range (IQR) method. Display these outliers.
+Replace the identified outliers in the 'Salary' column with the average salary value. Show the previous outlier values and the new 'Salary' values after replacement.
+Display the initial dataset before cleaning.
+Display the final cleaned dataset.
+
+---- 
+Convert the entire logic to Python code and give it together in a single script.
+
+2) si copia il python code e si mette dentro un Jupiter notebook, si fa girare e si genera l'output
+
+
+Create Wireframes using generative AI Tools
+(Wireframing with ChatGPT and figma)
+- si usa chatGPT per generare le descrizioni di testo per il wireframe, Prima si specifica cosa deve fare l'app e da quali pagine è composta e quali funzionalità ogni pagina deve avere, 
+Please transform these features into a detailed description that i could use to create wireframes for the app.
+
+- si usa il plugin "Wireframe designer" in figma, si fornisce del background context, si genera dei wireframe basati sul prompt (figma.com/community/plugins)
+- si fa refactoring del wireframe
+- si usa il plugin wiregen plugin to create wireframe
+
+

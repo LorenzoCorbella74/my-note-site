@@ -1,6 +1,6 @@
 # Deno Markdown Site Generator
 
-A static site generator built with Deno that transforms a collection of Markdown files into a structured HTML website.
+A static site generator built with Deno that transforms a [collection of Markdown files](https://github.com/LorenzoCorbella74/my-notes) into a structured HTML website.
 
 ## Features
 
@@ -21,14 +21,8 @@ A static site generator built with Deno that transforms a collection of Markdown
 ### Installation
 
 1. Clone this repository:
-   ```
-   git clone <repository-url>
-   cd deno-md-site-generator
-   ```
-2. Run the generator:
-   ```
-   deno task start
-   ```
+2. use a folder of .md files of your choice
+3. Run the generator with `deno task start`
 
 ## Acknowledgments
 
